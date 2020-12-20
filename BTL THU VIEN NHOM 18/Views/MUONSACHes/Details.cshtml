@@ -1,0 +1,59 @@
+﻿@model BTL_THU_VIEN_NHOM_18.Models.MUONSACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MUONSACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sophieumuon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sophieumuon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msnhanvien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msnhanvien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaymuon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaymuon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaytra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaytra)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sophieumuonid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

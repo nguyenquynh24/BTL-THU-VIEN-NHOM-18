@@ -1,0 +1,76 @@
+﻿@model  PagedList.IPagedList<BTL_THU_VIEN_NHOM_18.Models.DOCGIA>
+    @using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "PageList";
+    Layout = "~/Areas/admin/Views/Shared/Layout.cshtml";
+}
+
+<h2>PageList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+          msdocgia
+        </th>
+        <th>
+          tendocgia
+        </th>
+        <th>
+          diachidocgia
+        </th>
+        <th>
+          ngaysinhdocgia
+        </th>
+        <th>
+          emaildocgia
+        </th>
+        <th>
+          gioitinhdocgia
+        </th>
+        <th>
+          sodienthoaidocgia
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.msdocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tendocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diachidocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaysinhdocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emaildocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gioitinhdocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sodienthoaidocgia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.docgiaid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.docgiaid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.docgiaid })
+        </td>
+    </tr>
+}
+
+</table>
+<!-- them ma phan trang-->
+<br/>
+trang@(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+@Html.PagedListPager(Model,page=> Url.Action("PageList","Home", new {page}))
+<!-- ket thuc-->

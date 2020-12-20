@@ -1,0 +1,75 @@
+﻿@model BTL_THU_VIEN_NHOM_18.Models.DOCGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DOCGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.msdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tendocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tendocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachidocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachidocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaysinhdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaysinhdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emaildocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emaildocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gioitinhdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gioitinhdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sodienthoaidocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sodienthoaidocgia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.docgiaid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BTL_THU_VIEN_NHOM_18.Models.DOCGIA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.msdocgia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tendocgia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diachidocgia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaysinhdocgia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emaildocgia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gioitinhdocgia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sodienthoaidocgia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.msdocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tendocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diachidocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaysinhdocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emaildocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gioitinhdocgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sodienthoaidocgia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.docgiaid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.docgiaid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.docgiaid })
+        </td>
+    </tr>
+}
+
+</table>

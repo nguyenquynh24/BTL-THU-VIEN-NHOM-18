@@ -1,0 +1,51 @@
+﻿@model BTL_THU_VIEN_NHOM_18.Models.PHAT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PHAT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.mssach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mssach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msnhanvien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msnhanvien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lydophat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lydophat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

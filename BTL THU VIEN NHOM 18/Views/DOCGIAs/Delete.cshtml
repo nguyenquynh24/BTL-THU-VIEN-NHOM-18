@@ -1,0 +1,81 @@
+﻿@model BTL_THU_VIEN_NHOM_18.Models.DOCGIA
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DOCGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.msdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tendocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tendocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachidocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachidocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaysinhdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaysinhdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emaildocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emaildocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gioitinhdocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gioitinhdocgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sodienthoaidocgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sodienthoaidocgia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

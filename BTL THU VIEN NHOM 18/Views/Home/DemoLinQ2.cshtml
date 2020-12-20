@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BTL_THU_VIEN_NHOM_18.Models.viewmodel.docgiamuonsachviewmodel>
+
+@{
+    ViewBag.Title = "DemoLinQ2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DemoLinQ2</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sophieumuon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.msdocgia)
+        </th>
+      
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sophieumuon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.msdocgia)
+        </td>
+      
+     
+    </tr>
+}
+
+</table>

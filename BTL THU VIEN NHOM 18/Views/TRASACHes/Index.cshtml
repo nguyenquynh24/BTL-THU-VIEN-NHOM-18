@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BTL_THU_VIEN_NHOM_18.Models.TRASACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mssach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.msnhanvien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaytra)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.mssach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.msnhanvien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaytra)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sophieumuonid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sophieumuonid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sophieumuonid })
+        </td>
+    </tr>
+}
+
+</table>

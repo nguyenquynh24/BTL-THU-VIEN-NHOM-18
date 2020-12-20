@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BTL_THU_VIEN_NHOM_18.Models.NHAXUATBAN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.msnhaxuatban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tennhaxuatban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diachinhaxuatban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.websitenhaxuatban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.thongtinkhacnhaxuatban)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.msnhaxuatban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tennhaxuatban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diachinhaxuatban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.websitenhaxuatban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.thongtinkhacnhaxuatban)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.nhaxuatbanid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.nhaxuatbanid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.nhaxuatbanid })
+        </td>
+    </tr>
+}
+
+</table>

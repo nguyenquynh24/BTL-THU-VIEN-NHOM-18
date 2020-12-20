@@ -1,0 +1,75 @@
+﻿@model BTL_THU_VIEN_NHOM_18.Models.SACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.mssach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mssach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tensach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msnhaxuatban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msnhaxuatban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maloaisach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maloaisach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chuyennganh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chuyennganh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tinhtrangsach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tinhtrangsach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.khuvucdesach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.khuvucdesach)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sachid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

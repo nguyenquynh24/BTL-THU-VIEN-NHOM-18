@@ -1,0 +1,59 @@
+﻿@model BTL_THU_VIEN_NHOM_18.Models.NHAXUATBAN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NHAXUATBAN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.msnhaxuatban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msnhaxuatban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tennhaxuatban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tennhaxuatban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachinhaxuatban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachinhaxuatban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.websitenhaxuatban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.websitenhaxuatban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thongtinkhacnhaxuatban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thongtinkhacnhaxuatban)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.nhaxuatbanid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
